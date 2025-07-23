@@ -1,0 +1,217 @@
+
+
+.packages {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+
+  .packages-head {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .package-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .package-image {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+
+      .package-price {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 8px 15px;
+        border-radius: 25px;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+    }
+
+    .package-content {
+      padding: 1.5rem;
+
+      h3 {
+        font-size: 1.5rem;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+      }
+
+      .duration {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .description {
+        color: #555;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+
+      .highlights {
+        margin-bottom: 0.5rem;
+
+        h4 {
+          color: #2c3e50;
+          margin-bottom: 0.5rem;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            color: #666;
+            margin-bottom: 0.3rem;
+            padding-left: 1.5rem;
+            position: relative;
+
+            &:before {
+              content: "•";
+              color: #3498db;
+              position: absolute;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .about-kochi {
+    margin-top: 4rem;
+    padding: 3rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+
+      h2 {
+        color: #2c3e50;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+      }
+
+      .learn-more {
+        padding: 0.8rem 2rem;
+        background: transparent;
+        color: #3498db;
+        border: 2px solid #3498db;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #3498db;
+          color: white;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 0; // Remove horizontal padding for full-width slider
+
+    .packages-head {
+      padding: 0 1rem;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .packages-grid {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      gap: 1rem;
+      padding: 1rem;
+      margin: 0;
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .package-card {
+      flex: 0 0 85%;
+      scroll-snap-align: center;
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 1rem; // Add margin to last card for better spacing
+      }
+
+      &:hover {
+        transform: none; // Disable hover effect on mobile
+      }
+    }
+
+    .about-kochi {
+      margin: 2rem 1rem;
+      padding: 2rem 1rem;
+    }
+  }
+}
