@@ -1,8 +1,8 @@
 // Variables
-$navbar-height: 100px;
+$navbar-height: 95px;
 $mobile-breakpoint: 768px;
 $transition-speed: 0.3s;
-$navbar-height-mobile: 90px;
+$navbar-height-mobile: 55px;
 
 .navbar {
     width: 100%;
@@ -17,7 +17,7 @@ $navbar-height-mobile: 90px;
 
     &.scrolled {
         .navbar-container {
-            background-color: rgba(24, 24, 24, 0.76);
+            background-color: rgba(24, 24, 24, 0.7);
             border-radius: 50px;
             padding: 0 2rem;
             backdrop-filter: blur(8px);
@@ -44,8 +44,8 @@ $navbar-height-mobile: 90px;
 
 .logo-container {
     img {
-        width: 130px;
-        height: 50px;
+        width: 125px;
+        height: 45px;
         cursor: pointer;
         transition: transform $transition-speed ease;
 
@@ -134,26 +134,34 @@ $navbar-height-mobile: 90px;
     .navbar-container {
         width: 100%;
         padding: 0 1rem;
-        // height: $navbar-height-mobile;
+        height: $navbar-height-mobile;
     }
 
     .hamburger {
         display: block;
     }
+    .logo-container {
+        img {
+            width: 95px;  
+            height: 45px;  
+        }
+    }
 
     .nav-options {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: -100vw;
         width: 100%;
         height: 100vh;
         background-color: rgba(24, 24, 24, 0.98);
         flex-direction: column;
         justify-content: center;
         transition: right $transition-speed ease;
+        // visibility: hidden;
         
         &.show {
             right: 0;
+            visibility: visible;
         }
 
         .nav-link {

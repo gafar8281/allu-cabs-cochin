@@ -28,7 +28,7 @@ function Navbar() {
     };
 
     const navbarStyle2 = {
-        backgroundColor: 'rgba(24, 24, 24, 0.95)',
+        backgroundColor: 'rgba(24, 24, 24, 0.7)' ,   // rgba(24, 24, 24, 0.95)
     };
 
     const scrollToContact = () => {

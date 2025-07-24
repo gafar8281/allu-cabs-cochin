@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Packages.scss';
 
 function Packages() {
+  const [activeQuestion, setActiveQuestion] = useState(null);
+
   const packages = [
     {
       id: 1,
@@ -41,6 +43,33 @@ function Packages() {
     }
   ];
 
+  const faqs = [
+    {
+      id: 1,
+      question: "What's included in the package price?",
+      answer: "Our package prices typically include accommodation, transportation, guided tours, and some meals. Specific inclusions vary by package and are detailed in the package description."
+    },
+    {
+      id: 2,
+      question: "Can I customize these packages?",
+      answer: "Yes! All our packages can be customized to meet your specific needs. Contact our team for personalized modifications to any package."
+    },
+    {
+      id: 3,
+      question: "What's the best time to visit Kerala?",
+      answer: "The best time to visit Kerala is between October and February when the weather is pleasant. However, each season offers its own unique experiences."
+    },
+    {
+      id: 4,
+      question: "How do I book a package?",
+      answer: "You can book a package by contacting our team through phone, email, or the contact form on our website. We'll guide you through the booking process."
+    }
+  ];
+
+  const toggleQuestion = (id) => {
+    setActiveQuestion(activeQuestion === id ? null : id);
+  };
+
   return (
     <div className="packages">
       <div className="packages-head">
@@ -72,16 +101,23 @@ function Packages() {
         ))}
       </div>
 
-      <div className="about-kochi">
-        <div className="about-content">
-          <h2>About Kochi</h2>
-          <p>
-            Kochi, also known as Cochin, is a major port city on the south-west coast of India bordering 
-            the Laccadive Sea. Known as the Queen of the Arabian Sea, Kochi was an important spice 
-            trading centre on the west coast of India from the 14th century onward. Today, it ranks 
-            first in the total number of international and domestic tourist arrivals in Kerala.
-          </p>
-          <button className="learn-more">Learn More</button>
+      <div className="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div className="faq-container">
+          {faqs.map((faq) => (
+            <div key={faq.id} className="faq-item">
+              <div 
+                className={`faq-question ${activeQuestion === faq.id ? 'active' : ''}`}
+                onClick={() => toggleQuestion(faq.id)}
+              >
+                {faq.question}
+                <span className="faq-icon">{activeQuestion === faq.id ? '−' : '+'}</span>
+              </div>
+              <div className={`faq-answer ${activeQuestion === faq.id ? 'active' : ''}`}>
+                {faq.answer}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
