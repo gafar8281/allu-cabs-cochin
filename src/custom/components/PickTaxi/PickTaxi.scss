@@ -288,3 +288,15 @@
         }
     }
 }
+
+@media (max-width: 450px) {
+    .section-picktaxi {
+        .filters-section {
+            .sort-section {
+                display: none;
+            }
+        }
+    }
+}
+
+

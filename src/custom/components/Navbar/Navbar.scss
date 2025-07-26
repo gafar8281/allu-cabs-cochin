@@ -122,8 +122,9 @@ $navbar-height-mobile: 55px;
 
 @media (max-width: $mobile-breakpoint) {
     .navbar {
-        height: navbar-height-mobile;
+        height: $navbar-height-mobile;
         padding: 0.5rem;
+        
         
         &.scrolled .navbar-container {
             border-radius: 25px;
@@ -174,3 +175,5 @@ $navbar-height-mobile: 55px;
         }
     }
 }
+
+

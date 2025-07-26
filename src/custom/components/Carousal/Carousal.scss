@@ -78,8 +78,9 @@
     padding: 20px !important;
     
     &:before {
-      border-width: 0 3px 3px 0 !important;
-      padding: 12px !important;
+      // border-width: 0 3px 3px 0 !important;
+      // padding: 12px !important;
+      display: none !important;
     }
 
     &:hover {
@@ -203,7 +204,7 @@
   .carousel {
     .carousel-img {
       img {
-        height: 100vh;
+        height: 83vh;
       }
     }
 

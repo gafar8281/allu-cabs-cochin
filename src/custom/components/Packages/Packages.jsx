@@ -6,48 +6,79 @@ function Packages() {
 
   const packages = [
     {
-      id: 1,
-      name: 'Munnar',
-      image: '/assets/munnar.jpg',
-      duration: '3 Days / 2 Nights',
-      price: '₹12,999',
-      highlights: ['Tea Gardens', 'Eravikulam National Park', 'Echo Point'],
-      description: 'Experience the beauty of rolling hills and tea plantations in Munnar, Kerala\'s most popular hill station.'
+      "id": 1,
+      "name": "Kerala Scenic Trip",
+      "image": "/assets/kochi-image.jpg",
+      "duration": "6 Days / 5 Nights",
+      "price": "₹12,000",
+      "highlights": [
+        "Kochi ",
+        "Munnar",
+        "Thekkady ",
+        "Alleppey",
+        "Kochi Drop-off"
+      ],
+      "description": "Explore Munnar, Thekkady, and Alleppey in a 6-day Kerala road trip. Ideal for small groups."
     },
     {
-      id: 2,
-      name: 'Thekkady',
-      image: '/assets/thekkady.jpg',
-      duration: '2 Days / 1 Night',
-      price: '₹9,999',
-      highlights: ['Periyar Wildlife', 'Boat Safari', 'Spice Gardens'],
-      description: 'Discover the wild side of Kerala in Thekkady, home to diverse wildlife and spice plantations.'
+      "id": 2,
+      "name": "Kochi-Munnar-Alleppey",
+      "image": '/assets/alleppey.jpg',
+      "duration": "5 Days / 4 Nights",
+      "price": "₹10,000",
+      "highlights": [
+        "Kochi",
+        "Munnar",
+        "Alleppey",
+        "Kochi Drop-off"
+      ],
+      "description": "Compact 5-day Kerala trip covering hills and backwaters, perfect for small groups."
     },
     {
-      id: 3,
-      name: 'Aleppey',
-      image: '/assets/alleppey.jpg',
-      duration: '2 Days / 1 Night',
-      price: '₹11,999',
-      highlights: ['Houseboat Stay', 'Backwater Cruise', 'Beach Visit'],
-      description: 'Cruise through the serene backwaters of Aleppey in a traditional Kerala houseboat.'
+      "id": 3,
+      "name": "Kerala Tour",
+      "image": '/assets/munnar.jpg',
+      "duration": "9 Days / 8 Nights",
+      "price": "₹22,800",
+      "highlights": [
+        "Kochi",
+        "Athirappilly",
+        "Munnar",
+        "Thekkady",
+        "Alleppey",
+        "Varkala",
+        "Kovalam",
+        "Trivandrum",
+        "Kanyakumari"
+      ],
+      "description": "9-day Kerala trip covering hill stations, backwaters, beaches, and city sights. Trivandrum drop-off included."
     },
+    
+  
     {
-      id: 4,
-      name: 'Kovalam',
-      image: '/assets/kovalam.jpg',
-      duration: '3 Days / 2 Nights',
-      price: '₹13,999',
-      highlights: ['Lighthouse Beach', 'Ayurvedic Spa', 'Water Sports'],
-      description: 'Relax on the pristine beaches of Kovalam and enjoy various water activities.'
-    }
+      "id": 4,
+      "name": "Kerala Round Trip",
+      "image": '/assets/varakla-cliff.jpg',
+      "duration": "7 Days / 6 Nights",
+      "price": "₹18,000",
+      "highlights": [
+        "Kochi",
+        "Munnar",
+        "Thekkady",
+        "Alleppey",
+        "Varkala",
+        "Trivandrum"
+      ],
+      "description": "A 7-day Kerala road trip covering hills, backwaters, and beaches. Ideal for up to 3 persons."
+    },
+    
   ];
 
   const faqs = [
     {
       id: 1,
-      question: "What's included in the package price?",
-      answer: "Our package prices typically include accommodation, transportation, guided tours, and some meals. Specific inclusions vary by package and are detailed in the package description."
+      question: "What does Allu Cabs Cochin offer in Kerala?",
+      answer: "We offer personalized Kerala tour packages—from Alleppey houseboat cruises to Munnar hill escapes. Enjoy authentic local experiences, free travel planning, and warm hospitality, all tailored for a safe and unforgettable trip."
     },
     {
       id: 2,
@@ -57,7 +88,7 @@ function Packages() {
     {
       id: 3,
       question: "What's the best time to visit Kerala?",
-      answer: "The best time to visit Kerala is between October and February when the weather is pleasant. However, each season offers its own unique experiences."
+      answer: "The winter months from October to March are generally considered the best time to visit Kerala due to pleasant weather, ideal for exploring backwaters, beaches, and enjoying festivals. Alternatively, the monsoon season from June to September offers a unique experience with lush landscapes."
     },
     {
       id: 4,

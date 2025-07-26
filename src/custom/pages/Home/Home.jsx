@@ -14,11 +14,12 @@ function Home() {
     <>
         <Navbar />
         <Carousal />
+        <Testimonial />  
         <Services />
         <PickTaxi />
         <Packages />
-        <Quickcontact />
-        <Testimonial />
+        <Quickcontact /> 
+        {/* <Testimonial />        */}
         <Float />
         <Footer />
     </>
